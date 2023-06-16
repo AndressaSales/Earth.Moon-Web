@@ -1,0 +1,57 @@
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://beira.pt/coolkids/wp-content/uploads/sites/7/2014/08/universo.png');
+    background-size: cover;
+}
+.espaco{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url('https://thumbs.dreamstime.com/b/relevo-protegido-do-mapa-de-mundo-com-batimetria-12864292.jpg') ;
+    background-size: cover;
+    box-shadow: -25px -25px 25px black inset, 10px 10px 30px white inset, 0px 0px 20px blue; 
+    position: relative;
+    animation: rotale 35s infinite linear;
+}
+@keyframes rotale{
+    to{
+       background-position: 100%;
+    }
+}
+.orbit{
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    left:0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    animation: spin  5s linear infinite; /*botar a animação na orbita*/
+}
+.lua{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-image: url('https://i.pinimg.com/originals/9b/b6/20/9bb620253d66d086d0faa3ce5663b86a.png');
+    background-size: cover; 
+    box-shadow: -25px -25px 25px black inset, 10px 10px 30px white inset, 0px 0px 20px rgba(128, 128, 128, 0.622); 
+    position: absolute;
+    left:-11px;
+    top:115px;
+    
+   
+}
+@keyframes spin{
+    100%{
+        transform: rotate(
+            360deg
+        );
+    }
+
+}
